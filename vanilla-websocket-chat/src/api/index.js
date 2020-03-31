@@ -3,8 +3,7 @@
 const express = require('express');
 const handleUpgrade = require('./websocket');
 
-module.exports = port => {
-  const app = express();
+module.exports = (app, port) => {
   // Ensure that `req.query` values are always strings or nullish,
   // no arrays or objects.
   app.set('query parser', 'simple');
@@ -17,6 +16,7 @@ module.exports = port => {
   app.use(require('./checkAuth'));
 
   app.put('/user', require('./updateUser'));
+  app.get('/messages', require('./messages'));
 
   // Error handling middleware
   app.use(function(err, req, res, next) {

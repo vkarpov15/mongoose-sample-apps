@@ -1,5 +1,6 @@
 'use strict';
 
+const User = require('../models/User');
 const jsonwebtoken = require('jsonwebtoken');
 const secretToken = require('./secretToken');
 

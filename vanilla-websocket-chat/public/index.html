@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Mongoose Websocket Chat with Vanilla JS</title>
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="/style.css">
+    <div id="content">
+      <div id="messages"></div>
+      <div id="nav">
+        <div class="brand">Mongoose Chat</div>
+        <div class="action">Login</div>
+      </div>
+      <div id="input">
+        <form action="javascript:void 0" onsubmit="onSubmit()">
+          <input type="text" id="message-input">
+          <button>Send</button>
+        </form>
+      </div>
+
+      <transition id="modal" name="modal" style="display: none">
+        <div class="modal-mask">
+          <div class="modal-wrapper">
+            <div class="modal-container">
+              <div class="modal-header" class="modal-header-success">
+                Log In
+              </div>
+      
+              <div class="modal-body">
+                <form action="javascript:void 0" onsubmit="onLogin()" id="login-form">
+                  <div>
+                    <input type="text" name="email" />
+                  </div>
+                  <div>
+                    <input type="password" name="password" />
+                  </div>
+                  <button type="Submit">Log In</button>
+                </form>
+              </div>
+      
+              <div class="modal-footer">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

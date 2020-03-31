@@ -1,6 +1,7 @@
 {
   "name": "cli-websocket-chat",
   "scripts": {
+    "serve": "serve ./public",
     "test": "mocha test/*.test.js"
   },
   "dependencies": {
@@ -12,7 +13,9 @@
   },
   "devDependencies": {
     "axios": "0.19.2",
-    "mocha": "7.1.1"
+    "mocha": "7.1.1",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11"
   },
   "engines": {
     "node": ">=8.0.0"

@@ -1,0 +1,179 @@
+body {
+  margin: 0px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #232323;
+}
+
+#content {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+#nav .brand {
+  font-size: 24px;
+  position: absolute;
+  left: 13px;
+  top: 13px;
+}
+
+#nav .action {
+  font-size: 24px;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  cursor: pointer;
+}
+
+#messages {
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  height: calc(100% - 105px);
+  width: 100%;
+  overflow-y: scroll;
+}
+
+#messages .message {
+  padding-top: 8px;
+  padding-left: 8px;
+}
+
+#messages .message .timestamp {
+  color: #bbb;
+}
+
+#messages .message .user {
+  color: #42b983;
+}
+
+#input {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #ddd;
+}
+
+.modal-container input {
+  box-sizing: border-box;
+  display: block;
+  font-size: 18px;
+  padding: 4px;
+  border-radius: 3px;
+  background-color: #fafbfc;
+  border: 1px solid #dfe2e5;
+  margin-bottom: 0.5em;
+}
+
+.modal-container button {
+  border: 0px;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 4px;
+  text-align: center;
+}
+
+#input input {
+  box-sizing: border-box;
+  display: block;
+  font-size: 24px;
+  padding: 6px;
+  border-radius: 3px;
+  background-color: #fafbfc;
+  border: 1px solid #dfe2e5;
+  position: absolute;
+  width: calc(100% - 90px);
+  top: 5px;
+  left: 5px;
+}
+
+#input button {
+  border: 0px;
+  border-radius: 3px;
+  font-size: 24px;
+  padding: 6px;
+  position: absolute;
+  text-align: center;
+  width: 75px;
+  top: 5px;
+  right: 5px;
+}
+
+/* Modals */
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 300px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold
+}
+
+.modal-header-success {
+  color: #42b983;
+}
+
+.modal-header-error {
+  color: #ff0000;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

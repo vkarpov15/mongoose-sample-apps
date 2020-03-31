@@ -17,16 +17,23 @@ server.on('connection', (socket, req) => {
     try {
       message = JSON.parse(message);
     } catch (err) {
-      return socket.send(JSON.stringify({ error: true, message: err.message }));
+      return sendError(socket, err);
     }
 
     Message.create({ ...message, user, userName }).
-      then(doc => server.clients.forEach(client => client.send(JSON.stringify(doc)))).
+      then(doc => server.clients.forEach(client => sendSuccess(client, doc))).
       catch(err => {
         console.log('Error', err);
-        return socket.send(JSON.stringify({ error: true, message: err.message }));
+        return sendError(socket, err);
       });
   });
+
+  function sendError(socket, err) {
+    socket.send(JSON.stringify({ error: true, message: err.message }));
+  }
+  function sendSuccess(socket, res) {
+    socket.send(JSON.stringify({ error: false, res }));
+  }
 });
 
 module.exports = function handleUpgrade(request, socket, head) {
