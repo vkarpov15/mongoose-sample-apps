@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 require('./connect');
 
 const schema = mongoose.Schema({
-  user: { type: 'ObjectId', ref: 'User' },
+  user: { type: 'ObjectId', required: true, ref: 'User' },
   userName: { type: String, required: true, trim: true },
   body: { type: String, required: true }
 }, { timestamps: true });
