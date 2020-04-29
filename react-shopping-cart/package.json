@@ -1,0 +1,28 @@
+{
+  "name": "mongoose-react-shopping-cart",
+  "scripts": {
+    "start": "node .",
+    "dev": "env NODE_ENV=development npm start",
+    "seed": "node ./scripts/seed"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "express": "4.17.1",
+    "mongoose": "5.x"
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.0",
+    "@babel/preset-env": "7.9.0",
+    "@babel/preset-react": "7.9.4",
+    "axios": "0.19.2",
+    "babel-loader": "8.1.0",
+    "neat-csv": "5.2.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.1.2",
+    "serve": "11.3.0",
+    "stripe": "8.47.0",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11"
+  }
+}

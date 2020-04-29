@@ -1,0 +1,321 @@
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #208E96;
+}
+
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Inconsolata', monospace;
+}
+
+p code {
+  background-color: #f5f5f5;
+  padding: 2px;
+  border-radius: 2px;
+  color: #0A5257;
+}
+
+li code {
+  background-color: #f5f5f5;
+  padding: 2px;
+  border-radius: 2px;
+  color: #0A5257;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+li {
+  line-height: 1.5em;
+}
+
+.image-with-caption {
+  padding: 3px;
+  border: 1px solid #ddd;
+  text-align: center;
+  width: auto;
+  margin-bottom: 1em;
+}
+
+.image-with-caption img {
+  width: 100%;
+  margin-bottom: 0px !important;
+  padding: 0px !important;
+  border: 0px !important;
+}
+
+.image-with-caption .caption {
+  color: #333;
+  font-size: 0.6em;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  margin: 0px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+button {
+  background-color: #F0DB4F;
+  border: 0px;
+  border-radius: 3px;
+  padding: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.clear {
+  clear: both;
+}
+
+.error {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.25em;
+  color: red;
+}
+
+table {
+  border: 1px solid #ddd;
+  padding: 0px;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+td {
+  border-top: 1px solid #ddd;
+}
+
+td {
+  padding: 5px;
+}
+
+/* Nav */
+
+.nav {
+  width: 100%;
+  background-color: #fafbfc;
+  height: 65px;
+  border-bottom: 1px solid #ddd;
+}
+
+.branding {
+  padding-top: 7px;
+  padding-left: 0.25em;
+  font-size: 1.75em;
+}
+
+.branding .logo {
+  float: left;
+}
+
+.branding .name {
+  float: left;
+  margin-top: 0.2em;
+  margin-left: 0.25em;
+}
+
+.branding .name a {
+  color: black;
+}
+
+.logo img {
+  width: 1.75em;
+  height: 1.75em;
+}
+
+.links {
+  margin-top: 0.2em;
+  float: right;
+}
+
+.links a {
+  margin-right: 0.75em;
+}
+
+/* End Nav */
+
+.content {
+  position: relative;
+  padding: 15px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breadcrumbs {
+  font-size: 0.8em;
+  color: #ddd;
+}
+
+/* Songs */
+
+.song {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.song .picture {
+  float: left;
+  padding-right: 1em;
+}
+
+.song .picture img {
+  height: 60px;
+  width: 60px;
+}
+
+.song .title {
+  float: left;
+  font-size: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+.song .stats {
+  margin-top: 0.25em;
+}
+
+.song .stats .stat {
+  background-color: #f0f0f0;
+  color: #208E96;
+  border-radius: 3px;
+  padding: 5px;
+  margin-right: 0.5em;
+  font-size: 0.5em;
+}
+
+.song .stats .stat a {
+  color: white;
+}
+
+.song .add-to-cart {
+  float: right;
+}
+
+.list-cta {
+  width: 100%;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.list-cta button {
+  font-size: 1.5em;
+}
+
+form.search input {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 1.25em;
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 25%;
+}
+
+form.search button {
+  padding: 5px;
+  font-size: 1.25em;
+  margin-left: 0.5em;
+}
+
+/* Cart */
+
+.cart tr.summary td {
+  background-color: #ddd;
+}
+
+#payment-form {
+  width: 350px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  margin-top: 25px;
+}
+
+#payment-form .button-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+#payment-form button {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 1.25em;
+  width: 150px;
+}
+
+/* Login */
+
+.login label {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.login input {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 1.25em;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.login button {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+}
+
+/* Mobile */
+
+@media (max-width: 1000px) {
+  .allwrapper {
+    padding: 15px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 0px;
+    margin-top: 55px;
+  }
+
+  .nav {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .nav .links {
+    display: none;
+  }
+
+  .cta img {
+    max-width: 370px;
+  }
+
+  li {
+    line-height: 2em;
+  }
+}
