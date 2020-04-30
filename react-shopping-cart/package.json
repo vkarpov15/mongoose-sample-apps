@@ -3,7 +3,8 @@
   "scripts": {
     "start": "node .",
     "dev": "env NODE_ENV=development npm start",
-    "seed": "node ./scripts/seed"
+    "seed": "node ./scripts/seed",
+    "test": "env NODE_ENV=test mocha test/*.test.js"
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
@@ -16,13 +17,13 @@
     "@babel/preset-react": "7.9.4",
     "axios": "0.19.2",
     "babel-loader": "8.1.0",
+    "mocha": "7.1.2",
     "neat-csv": "5.2.0",
+    "puppeteer": "3.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "5.1.2",
-    "serve": "11.3.0",
     "stripe": "8.47.0",
-    "webpack": "4.42.1",
-    "webpack-cli": "3.3.11"
+    "webpack": "4.42.1"
   }
 }

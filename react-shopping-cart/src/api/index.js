@@ -27,7 +27,9 @@ module.exports = () => {
 
   // Error handling middleware
   app.use(function(err, req, res, next) {
-    console.log(err.stack);
+    if (process.env.NODE_ENV !== 'test') {
+      console.log(err.stack);
+    }
     res.status(err.status || 500).json({ message: err.message });
   });
 

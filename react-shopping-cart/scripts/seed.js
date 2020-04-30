@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 const fs = require('fs');
 const neatCsv = require('neat-csv');
 
-run().catch(err => console.error(err));
+module.exports = run().catch(err => console.error(err));
 
 async function run() {
   // Song data adapted from:

@@ -14,7 +14,7 @@ app.use(express.static('./public'));
 app.use('/api', api());
 
 const port = config.port || 3000;
-app.listen(config.port);
+module.exports = app.listen(config.port);
 console.log('Listening on port ' + config.port);
 
 if (process.env.NODE_ENV === 'development') {

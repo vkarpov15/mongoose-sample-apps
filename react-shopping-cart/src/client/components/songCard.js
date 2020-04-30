@@ -1,7 +1,6 @@
 'use strict';
 
 const React = require('react');
-const Router = require('react-router-dom');
 
 module.exports = props => (
   <div class="song">
@@ -9,9 +8,9 @@ module.exports = props => (
       <img src={props.image}></img>
     </div>
     <div class="title">
-      <Router.Link to={'/song/' + props._id}>
+      <span class="song-description">
         "{props.name}" - {props.artist}
-      </Router.Link>
+      </span>
       <div class="stats">
         <span class="stat">Duration: {durationToString(props.duration)}</span>
         <span class="stat">Popularity: {props.popularity.toFixed(2)}</span>
@@ -32,6 +31,15 @@ module.exports = props => (
 );
 
 function AddToCartButton(props) {
+  const addToCart = ev => {
+    ev.preventDefault();
+    props.addToCart(props);
+  };
+  const removeFromCart = ev => {
+    ev.preventDefault();
+    props.removeFromCart(props);
+  };
+
   if (props.purchased) {
     return (
       <div class="add-to-cart">
@@ -50,14 +58,18 @@ function AddToCartButton(props) {
   if (props.inCart !== true) {
     return (
       <div class="add-to-cart">
-        <button onClick={() => props.addToCart(props)}><b>+</b> ${props.price}</button>
+        <form onSubmit={addToCart}>
+          <button><b>+</b> ${props.price}</button>
+        </form>
       </div>
     );
   }
 
   return (
     <div class="add-to-cart">
-      <button onClick={() => props.removeFromCart(props)}><b>-</b> ${props.price}</button>
+      <form onSubmit={removeFromCart}>
+        <button><b>-</b> ${props.price}</button>
+      </form>
     </div>
   );
 }

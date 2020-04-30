@@ -6,6 +6,7 @@ const http = require('../http');
 
 const stripe = Stripe(config.stripePublicKey);
 const elements = stripe.elements();
+window.stripe = stripe;
 
 class Cart extends React.Component {
   constructor(props) {

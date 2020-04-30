@@ -68,12 +68,20 @@ class App extends React.Component {
     window.location.hash = '/login';
   }
 
+  waitForAuth(fn) {
+    if (this.state.status === 'LOADING') {
+      return (<div>Loading...</div>);
+    }
+    return fn();
+  }
+
   render() {
     const onLogin = (token) => this.onLogin(token);
     const onUpdateCart = user => this.onUpdateCart(user);
     const onCheckout = user => this.onCheckout(user);
     const onRegister = () => this.onRegister();
 
+    console.log('TT', this.state.user);
     const cart = this.state.user == null ? [] : this.state.user.cart;
     return (
       <Router.HashRouter>
@@ -100,10 +108,10 @@ class App extends React.Component {
                   </div>
                 </Router.Route>
                 <Router.Route path="/cart">
-                  <Cart cart={cart} onCheckout={onCheckout} />
+                  { this.waitForAuth(() => <Cart cart={cart} onCheckout={onCheckout} />) }
                 </Router.Route>
                 <Router.Route path="/library">
-                  <Library />
+                  { this.waitForAuth(() => <Library />) }
                 </Router.Route>
                 <Router.Route path="/login">
                   <Login onLogin={onLogin} />
