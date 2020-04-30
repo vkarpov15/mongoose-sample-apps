@@ -14,6 +14,10 @@ const purchaseSchema = mongoose.Schema({
   song: {
     type: Song.schema,
     required: true
+  },
+  intentId: {
+    type: String,
+    required: true
   }
 }, { timestamps: true });
 

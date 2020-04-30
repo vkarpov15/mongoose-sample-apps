@@ -5,9 +5,18 @@ const config = require('../../config');
 const stripe = require('stripe')(config.stripePrivateKey);
 
 module.exports = function checkout(req, res, next) {
-  const getStripeData = stripe.paymentIntents.retrieve(req.body.intentId);
-  const populateCart = req.user.populate('cart').execPopulate();
-  Promise.all([getStripeData, populateCart]).
+  const intentId = req.body.intentId || '';
+
+  return Purchase.findOne({ intentId }).
+    then(doc => {
+      if (doc != null) {
+        throw new Error(`Intent id ${intentId} was already used`);
+      }
+
+      const getStripeData = stripe.paymentIntents.retrieve(req.body.intentId);
+      const populateCart = req.user.populate('cart').execPopulate();
+      return Promise.all([getStripeData, populateCart]);
+    }).
     then(([intent]) => {
       const { user } = req;
       const paid = intent.amount;
@@ -17,7 +26,7 @@ module.exports = function checkout(req, res, next) {
         throw new Error(`Paid ${paid} but got ${cartAmount} in cart`);
       }
 
-      return Purchase.create(user.cart.map(song => ({ user, song })));
+      return Purchase.create(user.cart.map(song => ({ user, song, intentId })));
     }).
     then(() => {
       req.user.cart = [];
