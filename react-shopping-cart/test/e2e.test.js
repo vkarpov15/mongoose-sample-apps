@@ -65,6 +65,9 @@ describe('e2e test', function() {
 
   before(() => api);
   after(async function() {
+    if (process.env.D) {
+      return;
+    }
     await api.close();
     await mongoose.disconnect();
   });
