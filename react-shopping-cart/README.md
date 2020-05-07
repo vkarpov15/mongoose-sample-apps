@@ -1,9 +1,7 @@
 # react-shopping-cart
 
 A lightweight React music store app with a Mongoose-backed API.
-Here's a video demo:
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/8585c9edd5384572b29f15d9035bf77a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+Here's a video demo: https://www.loom.com/embed/8585c9edd5384572b29f15d9035bf77a
 
 Song data adapted from the [19000 Spotify Songs data set](https://www.kaggle.com/edalrami/19000-spotify-songs/data).
 
