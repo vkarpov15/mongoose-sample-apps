@@ -1,0 +1,239 @@
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #208E96;
+}
+
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Inconsolata', monospace;
+}
+
+p code {
+  background-color: #f5f5f5;
+  padding: 2px;
+  border-radius: 2px;
+  color: #0A5257;
+}
+
+li code {
+  background-color: #f5f5f5;
+  padding: 2px;
+  border-radius: 2px;
+  color: #0A5257;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+li {
+  line-height: 1.5em;
+}
+
+button {
+  background-color: #F0DB4F;
+  border: 0px;
+  border-radius: 3px;
+  padding: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.clear {
+  clear: both;
+}
+
+.error {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.25em;
+  color: red;
+}
+
+table {
+  border: 1px solid #ddd;
+  padding: 0px;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+td {
+  border-top: 1px solid #ddd;
+}
+
+td {
+  padding: 5px;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  margin-bottom: 3px;
+}
+
+input[type="number"] {
+  width: 6em;
+}
+
+/* Nav */
+
+.nav {
+  width: 100%;
+  background-color: #fafbfc;
+  height: 65px;
+  border-bottom: 1px solid #ddd;
+}
+
+.branding {
+  padding-top: 7px;
+  padding-left: 0.25em;
+  font-size: 1.75em;
+}
+
+.branding .logo {
+  float: left;
+}
+
+.branding .name {
+  float: left;
+  margin-top: 0.2em;
+  margin-left: 0.25em;
+}
+
+.branding .name a {
+  color: black;
+}
+
+.logo img {
+  width: 1.75em;
+  height: 1.75em;
+  margin-top: -0.15em;
+}
+
+.links {
+  margin-top: 0.2em;
+  float: right;
+}
+
+.links a {
+  margin-right: 0.75em;
+}
+
+/* End Nav */
+
+.content {
+  position: relative;
+  padding: 15px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login label {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.login input {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 1.25em;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.login button {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+}
+
+.add-stock {
+  border: 1px dotted #F0DB4F;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.add-stock .input {
+  display: inline-block;
+  position: relative;
+}
+
+.add-stock .input input[type="text"] {
+  width: 140px;
+}
+
+.add-stock .autocomplete {
+  position: absolute;
+  top: 22px;
+  background-color: #fdfdfd;
+  width: 140px;
+}
+
+.add-stock .autocomplete div {
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  cursor: pointer;
+  padding: 0.25em;
+}
+
+.stock {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.stock .info {
+  float: left;
+}
+
+.stock .quantities {
+  float: right;
+}
+
+.stock .symbol {
+  font-size: 1.5em;
+}
+
+.stock .name {
+  color: #666;
+}
+
+.stock .price {
+  font-size: 1.5em;
+  color: #208E96;
+}
+
+.stock .quantity {
+  color: #666;
+}
+
+.summary {
+  float: right;
+  border-top: 1px solid #ddd;
+  color: #208E96;
+  padding: 5px;
+}

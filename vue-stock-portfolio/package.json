@@ -1,0 +1,25 @@
+{
+  "name": "vue-stock-portfolio",
+  "scripts": {
+    "local": "env NODE_ENV=local npm start",
+    "seed": "node ./scripts/seed",
+    "start": "node .",
+    "test": "mocha test/*.test.js"
+  },
+  "dependencies": {
+    "axios": "0.19.2",
+    "bcryptjs": "2.4.3",
+    "cookie-parser": "1.4.5",
+    "express": "4.17.1",
+    "mongoose": "5.x"
+  },
+  "devDependencies": {
+    "mocha": "7.1.2",
+    "neat-csv": "5.2.0",
+    "puppeteer": "3.0.2",
+    "vue": "2.6.11",
+    "vue-router": "3.2.0",
+    "vue-server-renderer": "2.6.11",
+    "webpack": "4.42.1"
+  }
+}
